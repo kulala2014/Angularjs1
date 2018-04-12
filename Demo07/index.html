@@ -1,0 +1,42 @@
+<!DOCTYPE <HTML>
+<html ng-app="app01">
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+        .border{
+            border: 10px solid lightblue;
+        }
+        .bg{
+            background: lightgreen;            
+        }
+        .color{
+            color:orangered;
+            font-size: 20px;
+            font-family:"microsoft yahei";
+        }
+        div{
+            min-height: 100px;
+        }
+        </style>
+    </head>
+    <body>
+        <div ng-controller="HelloController">
+            <p>
+                <input type="checkbox" ng-model="isBorder"/>边框
+                <input type="checkbox" ng-model="isBg"/>背景
+                <input type="checkbox" ng-model="isColor"/>前景
+                <button type="button" ng-click="cls1={'border-radius':'15px'}">圆角</button>              
+            </p>
+            <div ng-class="{border:isBorder,bg:isBg,color:isColor}" ng-style="cls1">
+                Hello ng-class and ng-style
+            </div>
+        </div>
+        <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            var app01 = angular.module("app01",[]);
+            app01.controller("HelloController", function($scope){
+
+            });
+        </script>
+    </body>
+</html>

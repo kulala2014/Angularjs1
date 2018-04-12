@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/foundation.min.css"/>
+    <title></title>
+</head>
+<body style="padding:10px;">
+<fieldset>
+    <legend>The first example:</legend>
+    <b>Calcute</b>
+    <br>
+    <br>
+    <table>
+        <tr><td>Price:($)</td><td>Count:</td></tr>
+        <tr>
+            <td><input type="number" ng-model="qty" required></td>
+            <td><input type="number" ng-model="cost" required></td>
+        </tr>
+    </table>
+    <b>Value:</b>{{qty * cost | currency:'￥'}}
+</fieldset>
+<fieldset>
+    <b>Change model to control dom:</b>
+    <br>
+    <br>
+    <legend>The Second example:</legend>
+    <input type="text" ng-model="data.msg"/>
+    <div  class="{{data.msg}}">I am a {{data.msg}}</div>
+</fieldset>
+
+<fieldset>
+    <b>Change model to control dom:</b>
+    <br>
+    <br>
+    <legend>The Third example:</legend>
+    <div ng-controller="PhoneListCtrl">
+        <ui>
+            <li ng-repeat="phone in phones">
+                {{phone.name}}
+            <p>{{phone.snippet}}</p>
+        </ui> 
+    </div>
+</fieldset>
+
+<fieldset>
+    <b>Change model to control dom:</b>
+    <br>
+    <br>
+    <legend>The custorm directive example:</legend>
+    <say-hello-new>kulala</say-hello-new>
+</fieldset>
+
+<fieldset>
+      <div ng-controller="BookStore">
+         <table class="mytable">
+            <tr>
+               <td>
+                  <span>Below output is produced from AngularJS's <strong>{{}}</strong> directive.</span>
+               </td>
+            </tr>
+            <tr ng-repeat="item in items">
+               <td>
+                  <p> <b>{{item.Name}}</b> is in our stock.</p>
+               </td>
+            </tr>
+         </table>
+         <table class="mytable">
+            <tr>
+               <td>
+                  <span>Below output is produced from AngularJS's <strong>ng-bind</strong> directive.</span>
+               </td>
+            </tr>
+            <tr ng-repeat="item in items">
+               <td>
+                  <p> <b><span ng-bind="item.Name"></span></b> is in our stock.</p>
+               </td>
+            </tr>
+         </table>
+         <table class="mytable">
+            <tr>
+               <td>
+                  <span>Below output is produced from AngularJS's <strong>ng-non-bindable</strong> directive.</span>
+               </td>
+            </tr>
+            <tr ng-repeat="item in items">
+               <td>
+                  <div ng-non-bindable>
+                     <p> <b>{{item.Name}}</b> is in our stock.</p>
+                  </div>
+               </td>
+            </tr>
+         </table>
+      </div>
+</fieldset>
+</body>
+<script src="js/angular.min.js"></script>
+<script src="js/controller.js"></script>
+</html>

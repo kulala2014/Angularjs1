@@ -1,0 +1,10 @@
+<div class="form-group" ng-show="vm.hasFiles">
+    <ul class="list-unstyled">
+        <li>
+            <strong>Files:</strong>
+        </li>
+        <li ng-repeat="file in vm.files" ng-bind="file.name" />
+    </ul>
+    <input class="btn btn-primary" type="button" ng-click="vm.uploadFiles()" value="Upload">
+    <input class="btn btn-warning" type="reset" value="Cancel">
+</div>

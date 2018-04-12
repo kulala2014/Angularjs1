@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/foundation.min.css"/>
+    <title></title>
+</head>
+<body style="padding:10px;" ng-app="">
+    <div>
+           <input type="text" ng-model="user.name">
+           <h1 ng-cloak class="ng-cloak">{{user.name}}</h1>
+           <div ng-bind="'username: '+user.name"></div>
+           <div class="{{user.name}}">{{user.name}}</div>
+    </div>
+</body>
+<script src="js/angular.min.js"></script>
+</html>

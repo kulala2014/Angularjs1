@@ -1,0 +1,6 @@
+D:\Learning\AngularJS\SampleApp2\SampleApp2\bin\SampleApp2.dll.config
+D:\Learning\AngularJS\SampleApp2\SampleApp2\bin\SampleApp2.dll
+D:\Learning\AngularJS\SampleApp2\SampleApp2\bin\SampleApp2.pdb
+D:\Learning\AngularJS\SampleApp2\SampleApp2\obj\Debug\SampleApp2.csprojResolveAssemblyReference.cache
+D:\Learning\AngularJS\SampleApp2\SampleApp2\obj\Debug\SampleApp2.dll
+D:\Learning\AngularJS\SampleApp2\SampleApp2\obj\Debug\SampleApp2.pdb
